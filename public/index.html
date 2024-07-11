@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRT Subtitle Fixer</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="drag-and-drop-area-main-frame">
+            <div class="header">Drag your SRT file(s) to fix</div>
+            <button class="drag-and-drop-zone" id="drop_zone" onclick="document.getElementById('file_input').click();">
+                <div class="button-items">
+                    <i class='bx bx-file-blank'></i>
+                    <p>Click to Choose File(s)</p>
+                </div>
+            </button>
+            <input type="file" id="file_input" class="hidden" multiple />
+            
+            <form id="upload_form" action="subtitle.php" method="POST" enctype="multipart/form-data" class="hidden">
+                <input type="file" id="file_upload" name="file_upload[]" multiple />
+            </form>
+
+            <div class="uploaded-files-area-main-frame hidden" id="uploaded_files_section">
+                <div class="uploaded-files-header">Uploaded Files:</div>
+                <div class="list-of-uploaded-files">
+                    <ul id="uploaded_files_list">
+                        <!-- Dynamic file list will be appended here -->
+                    </ul>
+                </div>
+                <button id="fix_files_button" onclick="submitForm()">Fix Uploaded Files</button>
+
+                <div id="popup" class="hidden">
+                    <p>Download your processed files:</p>
+                    <button id="popup_download_button">Download</button>
+                </div>
+                
+            </div>
+
+            <footer>Made by Arhan Goncalı | Grizzly Industries</footer>
+            <div id="uploaded_file_link" style="margin-top: 20px;"></div>
+        </div>
+    </main>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    
+}
+.drag-and-drop-area-main-frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20vh;
+}
+.drag-and-drop-area-main-frame .header{
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.drag-and-drop-zone{
+    border: 2px dashed grey;
+    border-radius: 30px;
+    min-width: 300px;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.drag-and-drop-zone i{
+    font-size: 48px;
+    color: grey;
+}
+.drag-and-drop-area-main-frame button{
+    margin-top: 10px;
+    border: 2px dashed grey;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.1s ease-in-out;
+}
+.drag-and-drop-area-main-frame button:hover{
+    cursor: pointer;
+    background-color: #e1e1e1;
+    box-shadow: 0px 6px 12px grey;
+    scale: 0.98;
+}
+footer{
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    color: grey;
+    user-select: none;
+}
+.button-items p{
+    color: grey;
+}
+#download-button{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+.hidden {
+    display: none;
+}
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
